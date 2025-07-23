@@ -17,12 +17,13 @@
         [data-anim="fade"] {animation: fade-in .9s forwards; opacity:0}
         [data-anim="slide"] {animation: slide-in-right .9s forwards; opacity:0}
         .divider::before {content:"";display:block;height:1px;background:rgba(255,255,255,.05)}
+        html, body { overflow-x: hidden; }
     </style>
 </head>
-<body class="bg-zinc-900 text-zinc-100 font-sans leading-relaxed">
+<body class="bg-zinc-900 text-zinc-100 font-sans leading-relaxed overflow-x-hidden">
 
 <!-- NAV -->
-<header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+<header class="w-full max-w-full px-4 py-6 flex items-center justify-between">
     <a href="#" class="text-lg font-semibold tracking-tight">Ehud Vaknin</a>
     <nav class="hidden md:flex space-x-8 text-sm">
         <a href="#about"   class="hover:text-indigo-400 duration-150">About</a>
@@ -33,26 +34,26 @@
 </header>
 
 <!-- HERO -->
-<section class="max-w-7xl mx-auto px-6 pt-20 pb-32 grid md:grid-cols-2 gap-12">
+<section class="w-full max-w-full px-4 pb-9 pt-20 pb-32 grid md:grid-cols-2 gap-12">
     <div data-anim="fade" style="animation-delay:.1s">
         <h1 class="text-5xl md:text-6xl font-semibold tracking-tight">Hi, I'm Ehud Vaknin</h1>
         <p class="mt-6 text-lg text-zinc-400">Junior Software Engineer passionate about backend development. I enjoy building scalable APIs, backend systems, and automation workflows with Python, FastAPI, Docker, Redis, and n8n.</p>
-        <div class="mt-8 flex space-x-4">
-            <a href="#contact" class="px-5 py-3 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-medium duration-150">Get in touch</a>
-            <a href="/Ehud Vaknin - CV.pdf" class="px-5 py-3 rounded-md border border-zinc-700 hover:border-indigo-500 text-sm font-medium duration-150" download>Download CV</a>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="px-5 py-3 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-medium duration-150 text-center">Get in touch</a>
+            <a href="/Ehud Vaknin - CV.pdf" class="px-5 py-3 rounded-md border border-zinc-700 hover:border-indigo-500 text-sm font-medium duration-150 text-center" download>Download CV</a>
         </div>
-
     </div>
-    <div data-anim="slide" style="animation-delay:.2s">
+    <!-- Image block -->
+    <div data-anim="slide" style="animation-delay:.2s" class="order-2 md:order-2 flex justify-center md:justify-start">
         <img src="profile_pic.png" alt="Profile"
-             class="rounded-full object-cover w-96 h-128 shadow-xl ml-32">
+             class="rounded-full object-cover w-full max-w-xs mx-auto shadow-xl ml-0 md:ml-32">
     </div>
 </section>
 
 <div class="divider"></div>
 
 <!-- ABOUT -->
-<section id="about" class="max-w-5xl mx-auto px-6 py-24 space-y-12">
+<section id="about" class="w-full max-w-full px-4 py-16 sm:py-24 space-y-12">
     <div class="grid md:grid-cols-3 gap-12">
         <h2 class="text-3xl font-semibold tracking-tight md:col-span-1" data-anim="fade" style="animation-delay:.1s">
             About Me
@@ -67,39 +68,44 @@
 <div class="divider"></div>
 
 <!-- SKILLS -->
-<section id="skills" class="max-w-5xl mx-auto px-6 py-24">
+<section id="skills" class="w-full max-w-full px-4 py-16 sm:py-24">
     <h2 class="text-3xl font-semibold tracking-tight mb-12" data-anim="fade" style="animation-delay:.1s">Technical Stack</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm" data-anim="slide" style="animation-delay:.3s">
         <div class="flex flex-col items-center space-y-3 p-4 rounded-md border border-zinc-800 hover:border-indigo-500 duration-150">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-9 h-9">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-full max-w-[2.25rem] h-9">
             <span>Python</span>
         </div>
         <div class="flex flex-col items-center space-y-3 p-4 rounded-md border border-zinc-800 hover:border-indigo-500 duration-150">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" class="w-9 h-9">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" class="w-full max-w-[2.25rem] h-9">
             <span>FastAPI</span>
         </div>
         <div class="flex flex-col items-center space-y-3 p-4 rounded-md border border-zinc-800 hover:border-indigo-500 duration-150">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-9 h-9">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-full max-w-[2.25rem] h-9">
             <span>Docker</span>
         </div>
         <div class="flex flex-col items-center space-y-3 p-4 rounded-md border border-zinc-800 hover:border-indigo-500 duration-150">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="w-9 h-9">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="w-full max-w-[2.25rem] h-9">
             <span>Redis</span>
         </div>
         <div class="flex flex-col items-center space-y-3 p-4 rounded-md border border-zinc-800 hover:border-indigo-500 duration-150">
-            <img src="https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.svg" alt="n8n" class="w-9 h-9">
+            <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@15.7.0/icons/n8n.svg"
+                    alt="n8n icon"
+                    class="w-full max-w-[2.25rem] h-9 mx-auto filter invert"
+            />
             <span>n8n</span>
         </div>
+
         <div class="flex flex-col items-center space-y-3 p-4 rounded-md border border-zinc-800 hover:border-indigo-500 duration-150">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-9 h-9">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-full max-w-[2.25rem] h-9">
             <span>Git</span>
         </div>
         <div class="flex flex-col items-center space-y-3 p-4 rounded-md border border-zinc-800 hover:border-indigo-500 duration-150">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-9 h-9">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-full max-w-[2.25rem] h-9">
             <span>JavaScript</span>
         </div>
         <div class="flex flex-col items-center space-y-3 p-4 rounded-md border border-zinc-800 hover:border-indigo-500 duration-150">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="w-9 h-9">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="w-full max-w-[2.25rem] h-9">
             <span>SQL</span>
         </div>
     </div>
@@ -108,7 +114,7 @@
 <div class="divider"></div>
 
 <!-- PROJECTS -->
-<section id="projects" class="max-w-7xl mx-auto px-6 py-24">
+<section id="projects" class="w-full max-w-full px-4 py-16 sm:py-24">
     <h2 class="text-3xl font-semibold tracking-tight mb-12" data-anim="fade" style="animation-delay:.1s">Selected Projects</h2>
     <div class="grid md:grid-cols-3 gap-8">
 
@@ -197,11 +203,11 @@
     </div>
 </section>
 
-
 <div class="divider"></div>
 
-<!-- CONTACT
-<section id="contact" class="max-w-md mx-auto px-6 py-24">
+<!-- CONTACT (commented out) -->
+<!--
+<section id="contact" class="w-full max-w-full px-4 py-16 sm:py-24">
     <h2 class="text-3xl font-semibold tracking-tight mb-8 text-center" data-anim="fade" style="animation-delay:.1s">Get in Touch</h2>
     <form class="space-y-6" data-anim="slide" style="animation-delay:.2s" onsubmit="event.preventDefault();alert('Message sent!')">
         <div class="flex flex-col">
@@ -218,7 +224,8 @@
         </div>
         <button class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 rounded-md text-sm font-medium duration-150">Send Message</button>
     </form>
-</section>          -->
+</section>
+-->
 
 <div class="divider"></div>
 
