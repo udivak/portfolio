@@ -25,8 +25,8 @@
 <!-- NAV -->
 <header class="w-full max-w-full px-4 py-6 flex items-center justify-between">
     <a href="#" class="text-lg font-semibold tracking-tight p-2">Ehud Vaknin</a>
-    <nav class="flex justify-between items-center p-4">
-        <div class="flex space-x-8 pr-10">
+    <nav class="flex items-center p-4 w-full">
+        <div class="flex space-x-8 w-full justify-end md:justify-between pr-2 md:pr-10">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
@@ -34,20 +34,21 @@
     </nav>
 </header>
 
+
 <!-- HERO -->
 <section class="w-full max-w-full px-4 pb-9 pt-20 pb-32 grid md:grid-cols-2 gap-12">
     <div data-anim="fade" style="animation-delay:.1s" class="md:ml-16">
         <h1 class="text-5xl md:text-6xl font-semibold tracking-tight">Hi, I'm Ehud Vaknin</h1>
         <p class="mt-6 text-lg text-zinc-400">Junior Software Engineer passionate about backend development. I enjoy building scalable APIs, backend systems, and automation workflows with Python, FastAPI, Docker, Redis, and n8n.</p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="#contact" class="px-5 py-3 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-medium duration-150 text-center">Get in touch</a>
+            <button onclick="openModal()" class="px-5 py-3 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-medium duration-150 text-center">Get in touch</button>
             <a href="/Ehud Vaknin - CV.pdf" class="px-5 py-3 rounded-md border border-zinc-700 hover:border-indigo-500 text-sm font-medium duration-150 text-center" download>Download CV</a>
         </div>
     </div>
     <!-- Image block -->
     <div data-anim="slide" style="animation-delay:.2s" class="order-2 md:order-2 flex justify-center md:justify-start">
         <img src="profile_pic.png" alt="Profile"
-             class="rounded-full object-cover w-full max-w-xs mx-auto shadow-xl ml-0 md:ml-40">
+             class="rounded-full object-cover w-full max-w-xs mx-auto shadow-xl md:ml-40">
     </div>
 </section>
 
@@ -246,6 +247,20 @@
     </div>
 </footer>
 
+<!-- Contact Modal -->
+<div id="contactModal" class="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center hidden">
+    <div class="bg-zinc-900 text-zinc-100 p-8 rounded-xl max-w-sm w-full shadow-2xl text-center">
+        <h3 class="text-xl font-semibold mb-4">Contact Me</h3>
+        <p class="mb-2">
+            <b>Email:</b> <a href="mailto:udivak9@gmail.com" class="text-indigo-400 hover:underline">udivak9@gmail.com</a>
+        </p>
+        <p class="mb-6">
+            <b>Phone:</b> <a href="tel:+972501234567" class="text-indigo-400 hover:underline">053-4224700</a>
+        </p>
+        <button onclick="closeModal()" class="px-5 py-2 mt-2 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-medium">Close</button>
+    </div>
+</div>
+
 <!-- SCRIPTS -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
@@ -262,9 +277,17 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+    function openModal() {
+        document.getElementById('contactModal').classList.remove('hidden');
+    }
+    function closeModal() {
+        document.getElementById('contactModal').classList.add('hidden');
+    }
 </script>
 
 </body>
