@@ -1,0 +1,13 @@
+# OS junk
+.DS_Store
+
+# Logs
+*.log
+
+# Node modules (for JS projects)
+node_modules/
+
+# Python venv
+venv/
+.env
+
