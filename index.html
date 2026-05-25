@@ -266,6 +266,42 @@
             </div>
         </article>
 
+        <!-- Israel Housing Dashboard -->
+        <article class="group relative rounded-lg overflow-hidden border border-zinc-800 hover:border-indigo-500 duration-150" data-anim="fade" style="animation-delay:.2s">
+            <img src="israel_housing_dashboard_cover.png" alt="Israel Housing Dashboard — interactive transaction map with KPIs and filters" class="object-cover w-full h-56 group-hover:scale-105 duration-200">
+            <div class="p-6 space-y-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs bg-indigo-600/20 text-indigo-400 px-2.5 py-1 rounded-full font-medium">Data & ML</span>
+                    <span class="text-xs text-zinc-500">2025</span>
+                </div>
+                <h3 class="text-lg font-semibold tracking-tight">Israel Housing Dashboard</h3>
+                <p class="text-sm text-zinc-400">
+                    An end-to-end microservices platform for mapping and forecasting Israel's housing market. Scraper services pull real-estate transactions from public sources, ETL pipelines enrich them into a unified MongoDB feature store, and a FastAPI gateway powers the interactive dashboard alongside a dedicated multi-model ML price-prediction service.
+                </p>
+                <ul class="text-xs text-zinc-500 pl-4 list-disc space-y-1">
+                    <li>Zoom-aware H3 clustering over 270k+ records (MapLibre + deck.gl)</li>
+                    <li>FastAPI gateway with async MongoDB (Motor) and ~88 enriched features</li>
+                    <li>Multi-model serving (LightGBM, CatBoost, stacked) with model comparison</li>
+                    <li>Dockerized scrapers &amp; ETL pipelines (Playwright, pandas, geopandas)</li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Next.js</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">React</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">TypeScript</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">FastAPI</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">MongoDB</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">deck.gl</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">MapLibre</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">LightGBM</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">CatBoost</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Docker</span>
+                </div>
+                <a href="https://github.com/udivak/israel-housing-dashboard" class="inline-flex items-center text-sm text-indigo-400 hover:underline" target="_blank" rel="noopener">
+                    View on GitHub <i data-lucide="arrow-right" class="w-4 h-4 ml-1" stroke-width="1.5"></i>
+                </a>
+            </div>
+        </article>
+
         <!-- Whatsapp Order Chatbot Assistant -->
         <article class="group relative rounded-lg overflow-hidden border border-zinc-800 hover:border-indigo-500 duration-150" data-anim="fade" style="animation-delay:.2s">
             <img src="n8n_whatsapp_workflow.png" alt="n8n WhatsApp workflow automation" class="object-cover w-full h-56 group-hover:scale-105 duration-200">
