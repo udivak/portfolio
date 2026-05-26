@@ -302,6 +302,44 @@
             </div>
         </article>
 
+        <!-- PulseBoard -->
+        <article class="group relative rounded-lg overflow-hidden border border-zinc-800 hover:border-indigo-500 duration-150" data-anim="fade" style="animation-delay:.2s">
+            <img src="pulseboard_cover.png" alt="PulseBoard — self-hosted product analytics platform with live event firehose" class="object-cover w-full h-56 group-hover:scale-105 duration-200">
+            <div class="p-6 space-y-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs bg-indigo-600/20 text-indigo-400 px-2.5 py-1 rounded-full font-medium">Data & Backend</span>
+                    <span class="text-xs text-zinc-500">2026</span>
+                </div>
+                <h3 class="text-lg font-semibold tracking-tight">PulseBoard</h3>
+                <p class="text-sm text-zinc-400">
+                    A self-contained, end-to-end product-analytics platform — a miniature Mixpanel / PostHog — built as a 6-stage pipeline (SDK → FastAPI ingestion → Postgres outbox → Redpanda → ClickHouse sink → Redis pub/sub → Next.js dashboard). Three synthetic demo apps emit live events through the real SDK so the full stack is exercised on every cold start.
+                </p>
+                <ul class="text-xs text-zinc-500 pl-4 list-disc space-y-1">
+                    <li>Crash-safe Python SDK with disk-buffered batching and at-least-once delivery</li>
+                    <li>Transactional outbox + Redpanda relay for exactly-once-ish ingestion</li>
+                    <li>Sub-second live firehose via Redis pub/sub and Server-Sent Events</li>
+                    <li>Cohort retention heatmaps, anomaly highlights, and per-app KPIs over ClickHouse</li>
+                    <li>One-command local stack via Docker Compose with healthchecks and 90-day seeder</li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Python</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">FastAPI</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Next.js</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">TypeScript</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">ClickHouse</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Postgres</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Redpanda / Kafka</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Redis</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">SSE</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Tailwind</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Docker Compose</span>
+                </div>
+                <a href="https://github.com/udivak/PulseBoard" class="inline-flex items-center text-sm text-indigo-400 hover:underline" target="_blank" rel="noopener">
+                    View on GitHub <i data-lucide="arrow-right" class="w-4 h-4 ml-1" stroke-width="1.5"></i>
+                </a>
+            </div>
+        </article>
+
         <!-- Whatsapp Order Chatbot Assistant -->
         <article class="group relative rounded-lg overflow-hidden border border-zinc-800 hover:border-indigo-500 duration-150" data-anim="fade" style="animation-delay:.2s">
             <img src="n8n_whatsapp_workflow.png" alt="n8n WhatsApp workflow automation" class="object-cover w-full h-56 group-hover:scale-105 duration-200">
